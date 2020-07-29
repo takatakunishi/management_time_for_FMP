@@ -12,5 +12,18 @@ export const colorTheme = {
             background: "blue",
             color: "white",
         }
+    },
+    input: {
+        normal: {
+            background: "#FF7F50",
+            color: "whitesmoke",
+            border: "#B0E0E6",
+        },
+        focus: {
+            background: "smorkwhite",
+        },
+        placeholder: {
+            color: "#00BCD4",
+        }
     }
 }

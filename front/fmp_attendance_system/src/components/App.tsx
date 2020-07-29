@@ -4,6 +4,8 @@ import CircleBtn from './Atoms/btn/circleBtn'
 import SingleInput from './Atoms/input/singleInput'
 import PassInput from './Atoms/input/passInput'
 import SimpleText from './Atoms/text/simpleText'
+import BigText from './Atoms/text/bigText'
+
 
 function App() {
   const testOnClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => { }
@@ -15,6 +17,7 @@ function App() {
       <SingleInput onChenge={testOnChenge} label="singleInput" />
       <PassInput onChenge={testOnChenge} label="passInput" />
       <SimpleText label="simpleText" />
+      <BigText label="bigText" />
     </div>
   );
 }

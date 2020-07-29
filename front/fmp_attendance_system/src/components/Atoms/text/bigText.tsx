@@ -7,22 +7,22 @@ type Props = {
     label: string
 }
 
-const SimpleText: React.FC<Props> = props => {
+const BigText: React.FC<Props> = props => {
     const { label } = props
     return (
         <ThemeProvider theme={theme}>
-            <StyledSimpleText >
+            <StyledBigText >
                 {label}
-            </StyledSimpleText>
+            </StyledBigText>
         </ThemeProvider>
     )
 }
 
-export default SimpleText
+export default BigText
 
-const StyledSimpleText = styled.div`
+const StyledBigText = styled.div`
     display: inline-block;
-    font-size:${(props) => props.theme.fontTheme.text.normalFontSize};
+    font-size:${(props) => props.theme.fontTheme.text.largeFontSize};
     padding: 10px;
     color: #000;
     background: #ECECEC;
