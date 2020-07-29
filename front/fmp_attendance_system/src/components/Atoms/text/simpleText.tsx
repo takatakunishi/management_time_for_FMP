@@ -16,6 +16,7 @@ const SimpleText: React.FC<Props> = props => {
 export default SimpleText
 
 const StyledSimpleText = styled.div`
+    display: inline-block;
     padding: 10px;
     color: #000;
     background: #ECECEC;
