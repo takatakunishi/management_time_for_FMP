@@ -6,6 +6,7 @@ import Molecules from './Molecules/indexMolecules'
 import Login from './Pages/Login'
 import Test from './Pages/Test'
 import StartAttendance from './Pages/StartAttendance';
+import Active from './Pages/Active';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route exact={true} path="/molecules" component={Molecules} />
         <Route exact={true} path="/login" component={Login} />
         <Route exact={true} path="/attendance" component={StartAttendance} />
+        <Route path="/active" component={Active} />
       </HashRouter>
     </div>
   );

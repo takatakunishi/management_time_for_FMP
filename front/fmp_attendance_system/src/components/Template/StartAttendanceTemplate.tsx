@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import Header from '../Organisms/Header'
 import ShowTimes from '../Organisms/ShowTimes'
 import Circlebtn from '../Atoms/btn/circleBtn'
@@ -6,12 +7,23 @@ import styled from 'styled-components'
 import { StyledContainer, theme } from '../../styles/index'
 
 const StartAttendanceTemplate: React.FC = () => {
-    const testOnClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => { }
+    const history = useHistory();
+    const activityChange = (activity: string) => {
+        const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            e.preventDefault()
+            history.push({
+                pathname: '/' + activity,
+                state: {
+                }
+            })
+        }
+        return handleClick
+    }
     return (
         <StyledLogin>
             <Header />
             <FixedStyledContainer>
-                <Circlebtn onClickFunc={testOnClick} label="出勤" />
+                <Circlebtn onClickFunc={activityChange("active/working")} label="出勤" />
             </FixedStyledContainer>
             <FixedStyledContainer >
                 <ShowTimes />
