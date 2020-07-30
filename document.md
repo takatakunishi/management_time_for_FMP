@@ -13,3 +13,5 @@
 - atomic design
 - redux flow
 
+## Server
+
