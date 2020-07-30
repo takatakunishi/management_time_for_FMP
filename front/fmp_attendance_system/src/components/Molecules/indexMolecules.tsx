@@ -1,5 +1,6 @@
 import React from 'react'
 import PassForm from './passForm'
+import InputForm from './inputForm'
 
 type Props = {
     label: string,
@@ -14,6 +15,7 @@ const Molecules: React.FC = () => {
     return (
         <div>
             <PassForm onChangeFunc={testOnChenge} label="パンジャンドラム" />
+            <InputForm onChangeFunc={testOnChenge} label="英国面" />
         </div>
     )
 }
