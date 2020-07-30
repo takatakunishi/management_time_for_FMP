@@ -1,33 +1,42 @@
 import React from 'react'
 import styled from 'styled-components'
+import PassInput from '../Atoms/input/passInput'
+import BigText from '../Atoms/text/bigText'
+import { theme } from '../../styles/index'
+
 type Props = {
     label: string,
-    onChenge: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onChangeFunc: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const PassInput: React.FC<Props> = props => {
-    const { label, onChenge } = props
+const PassForm: React.FC<Props> = props => {
+    const { label, onChangeFunc } = props
     return (
-        <StyledPassInput onChange={onChenge} placeholder={label} type="password" />
+        <StyledPassForm theme={theme}>
+            <StyledContainer>
+                <BigText label={label} />
+            </StyledContainer>
+            <StyledContainer>
+                <PassInput onChangeFunc={onChangeFunc} label={label} />
+            </StyledContainer>
+        </StyledPassForm>
     )
 }
 
-export default PassInput
+export default PassForm
 
-const StyledPassInput = styled.input`
-    &::placeholder{
-        color: #00BCD4;
-    }
-    height:30px;
-    padding: 5px;
-    background: #ECECEC;
-    border: 2px solid #B0E0E6;
-    transition: .4s;
-    color: ;
-    &:focus {
-        cursor: pointer;
-        background: smorkwhite;
-        outline:0;
-        border: 2px solid #00BFFF;
-    }
+export const StyledPassForm = styled.div`
+    display: grid;
+    grid-template-rows: 60% 40%;
+    width: 310px;
+    height: 130px;
+    padding: 7px;
+    border: 2px solid ${(props) => props.theme.colorTheme.input.normal.border};
+    border-radius: 20px;
+`
+
+export const StyledContainer = styled.div`
+    display: flex;
+    align-items:center;
+    justify-content:center;
 `

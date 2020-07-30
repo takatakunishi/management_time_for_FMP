@@ -5,14 +5,14 @@ import { ThemeProvider } from 'styled-components'
 
 type Props = {
     label: string,
-    onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
+    onClickFunc: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void
 }
 
 const NormalBtn: React.FC<Props> = props => {
-    const { label, onClick } = props
+    const { label, onClickFunc } = props
     return (
         <ThemeProvider theme={theme}>
-            <StyledNormalBtn onClick={onClick}>
+            <StyledNormalBtn onClick={onClickFunc}>
                 {label}
             </StyledNormalBtn>
         </ThemeProvider>
@@ -21,13 +21,14 @@ const NormalBtn: React.FC<Props> = props => {
 
 export default NormalBtn
 
-const StyledNormalBtn = styled.button`
+export const StyledNormalBtn = styled.button`
     font-weight: bold;
     font-size: ${(props) => props.theme.fontTheme.btn.normal.normalFontSize};
     padding: 10px;
-    height: 40px;
+    height: ${(props) => props.theme.sizeTheme.btn.height};
     color: ${(props) => props.theme.colorTheme.btn.normal.color};
     background: ${(props) => props.theme.colorTheme.btn.normal.background};
+    border-radius: ${(props) => props.theme.sizeTheme.btn.borderRadius};
     transition: .4s;
     border-style: none;
     &:hover {

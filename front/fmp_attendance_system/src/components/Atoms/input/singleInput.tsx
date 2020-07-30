@@ -5,36 +5,34 @@ import { ThemeProvider } from 'styled-components'
 
 type Props = {
     label: string,
-    onChenge: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onChangeFunc: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
-const SingleInput: React.FC<Props> = props => {
-    const { label, onChenge } = props
+export const SingleInput: React.FC<Props> = props => {
+    const { label, onChangeFunc } = props
     return (
         <ThemeProvider theme={theme}>
-            <StyledSingleInput onChange={onChenge} placeholder={label} />
+            <StyledSingleInput onChange={onChangeFunc} placeholder={label} />
         </ThemeProvider>
     )
 }
 
-export default SingleInput
-
-const StyledSingleInput = styled.input`
+export const StyledSingleInput = styled.input`
     &::placeholder{
         color: ${(props) => props.theme.colorTheme.input.placeholder.color};
         font-size: ${(props) => props.theme.fontTheme.text.normalFontSize};
     }
     height:${(props) => props.theme.sizeTheme.input.height};
     width:${(props) => props.theme.sizeTheme.input.width};
-    padding: 5px;
-    background: #ECECEC;
-    border: 2px solid #B0E0E6;
+    padding-left: ${(props) => props.theme.sizeTheme.input.paddingLeft};
+    background: ${(props) => props.theme.colorTheme.input.normal.background};
+    border: 2px solid ${(props) => props.theme.colorTheme.input.normal.border};
     transition: .4s;
-    color: ;
+    border-radius: ${(props) => props.theme.sizeTheme.input.borderRadius};
     &:focus {
         cursor: pointer;
-        background: smorkwhite;
+        background: ${(props) => props.theme.colorTheme.input.focus.background};
         outline:0;
-        border: 2px solid #00BFFF;
+        border: 2px solid ${(props) => props.theme.colorTheme.input.focus.border};
     }
 `

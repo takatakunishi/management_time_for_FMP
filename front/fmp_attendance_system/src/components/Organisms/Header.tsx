@@ -1,34 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
+import { theme } from '../../styles/index'
+import { ThemeProvider } from 'styled-components'
 
-type Props = {
-    label: string,
-    onChenge: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
-
-const PassInput: React.FC<Props> = props => {
-    const { label, onChenge } = props
+const Header: React.FC = () => {
     return (
-        <StyledPassInput onChange={onChenge} placeholder={label} type="password" />
+        <ThemeProvider theme={theme}>
+            <StyledHeader>
+                <StyledTitle>
+                    Manadance
+                </StyledTitle>
+            </StyledHeader>
+        </ThemeProvider>
     )
 }
 
-export default PassInput
+export default Header
 
-const StyledPassInput = styled.input`
-    &::placeholder{
-        color: #00BCD4;
-    }
-    height:30px;
+const StyledHeader = styled.header`
+    display:flex;
+    justify-content:center;
+    height:45px;
     padding: 5px;
-    background: #ECECEC;
-    border: 2px solid #B0E0E6;
     transition: .4s;
-    color: ;
-    &:focus {
-        cursor: pointer;
-        background: smorkwhite;
-        outline:0;
-        border: 2px solid #00BFFF;
-    }
+    background: ${(props) => props.theme.colorTheme.main.color};
+`
+const StyledTitle = styled.div`
+    font-family: "Bookman Old Style";
+    display: inline-block;
+    font-size: 35px;
+    color: #000;
 `

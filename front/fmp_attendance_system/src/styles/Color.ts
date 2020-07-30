@@ -1,4 +1,8 @@
 export const colorTheme = {
+    main: {
+        color: "#FF7F50",
+        backgroundColor: "white",
+    },
     btn: {
         normal: {
             background: "#FF7F50",
@@ -15,12 +19,13 @@ export const colorTheme = {
     },
     input: {
         normal: {
-            background: "#FF7F50",
+            background: "whitesmoke",
             color: "whitesmoke",
             border: "#B0E0E6",
         },
         focus: {
-            background: "smorkwhite",
+            background: "whitesmoke",
+            border: "#00BFFF",
         },
         placeholder: {
             color: "#00BCD4",

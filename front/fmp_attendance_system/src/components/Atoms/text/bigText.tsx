@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { theme } from '../../../styles/index'
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 type Props = {
     label: string
@@ -23,7 +22,7 @@ export default BigText
 const StyledBigText = styled.div`
     display: inline-block;
     font-size:${(props) => props.theme.fontTheme.text.largeFontSize};
-    padding: 10px;
+    padding: 5px 10px;
     color: #000;
     background: #ECECEC;
 `
