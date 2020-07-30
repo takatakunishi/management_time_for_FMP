@@ -6,26 +6,26 @@ import { theme, StyledContainer } from '../../styles/index'
 
 type Props = {
     label: string,
-    onChangeFunc: (e: React.ChangeEvent<HTMLInputElement>) => void
+    timeLabel: string,
 }
 
-const InputForm: React.FC<Props> = props => {
-    const { label, onChangeFunc } = props
+const TimeCard: React.FC<Props> = props => {
+    const { label, timeLabel } = props
     return (
-        <StyledInputForm theme={theme}>
+        <StyledCard theme={theme}>
             <StyledContainer>
                 <BigText label={label} />
             </StyledContainer>
             <StyledContainer>
-                <SingleInput onChangeFunc={onChangeFunc} label={label} />
+                <BigText label={timeLabel} />
             </StyledContainer>
-        </StyledInputForm>
+        </StyledCard>
     )
 }
 
-export default InputForm
+export default TimeCard
 
-export const StyledInputForm = styled.div`
+export const StyledCard = styled.div`
     display: grid;
     grid-template-rows: 60% 40%;
     width: 310px;

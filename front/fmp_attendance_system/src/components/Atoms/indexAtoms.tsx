@@ -5,6 +5,7 @@ import { SingleInput } from './input/singleInput'
 import PassInput from './input/passInput'
 import SimpleText from './text/simpleText'
 import BigText from './text/bigText'
+import TitleText from './text/titleText'
 
 type Props = {
     label: string,
@@ -22,6 +23,7 @@ const Atoms: React.FC = () => {
             <PassInput onChangeFunc={testOnChenge} label="passInput" />
             <SimpleText label="simpleText" />
             <BigText label="bigText" />
+            <TitleText label="titleText" />
         </div>
     )
 }

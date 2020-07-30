@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import PassInput from '../Atoms/input/passInput'
 import BigText from '../Atoms/text/bigText'
-import { theme } from '../../styles/index'
-import { StyledInputForm, StyledContainer } from './inputForm'
+import { theme, StyledContainer } from '../../styles/index'
+import { StyledInputForm } from './inputForm'
 
 type Props = {
     label: string,
