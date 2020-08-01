@@ -1,5 +1,7 @@
 import React from 'react'
 import PassForm from './passForm'
+import InputForm from './inputForm'
+import TimeCard from './TimeCard'
 
 type Props = {
     label: string,
@@ -14,6 +16,8 @@ const Molecules: React.FC = () => {
     return (
         <div>
             <PassForm onChangeFunc={testOnChenge} label="パンジャンドラム" />
+            <InputForm onChangeFunc={testOnChenge} label="英国面" />
+            <TimeCard label="前回の退勤" timeLabel="2/4 24:34" />
         </div>
     )
 }

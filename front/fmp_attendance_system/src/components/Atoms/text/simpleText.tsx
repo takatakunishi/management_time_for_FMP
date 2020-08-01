@@ -20,7 +20,7 @@ const SimpleText: React.FC<Props> = props => {
 
 export default SimpleText
 
-const StyledSimpleText = styled.div`
+export const StyledSimpleText = styled.div`
     display: inline-block;
     font-size:${(props) => props.theme.fontTheme.text.normalFontSize};
     padding: 10px;

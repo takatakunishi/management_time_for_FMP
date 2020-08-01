@@ -23,7 +23,9 @@ const CircleBtn: React.FC<Props> = props => {
 export default CircleBtn
 
 const StyledCircleBtn = styled(StyledNormalBtn)`
-    height:150px;
-    width:150px;
+    height: ${(props) => props.theme.sizeTheme.btn.circleSize};
+    width: ${(props) => props.theme.sizeTheme.btn.circleSize};
+    font-size: ${(props) => props.theme.fontTheme.btn.normal.biggestFontSize};
+    font-weight:normal;
     border-radius:50%;
 `

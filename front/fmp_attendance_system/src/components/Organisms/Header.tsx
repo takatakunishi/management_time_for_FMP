@@ -19,9 +19,9 @@ export default Header
 
 const StyledHeader = styled.header`
     display:flex;
-    justify-content:center;
+    justify-content: center;
     height:45px;
-    padding: 5px;
+    padding: 5px 0;
     transition: .4s;
     background: ${(props) => props.theme.colorTheme.main.color};
 `
