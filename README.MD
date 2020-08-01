@@ -9,3 +9,4 @@
 
 ## 開発参加者
 - takatakunishi (Web front)
+- Kaito Kudo (iOS)
