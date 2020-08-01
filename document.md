@@ -13,5 +13,13 @@
 - atomic design
 - redux flow
 
+## iOS
+### 使用技術
+- Swift
+    - Carthage
+    - APIKit or Alamofire
+### 設計
+- MVP
+
 ## Server
 
