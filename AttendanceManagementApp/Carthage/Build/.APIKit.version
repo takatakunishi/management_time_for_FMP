@@ -1,0 +1,10 @@
+{
+  "commitish" : "5.1.0",
+  "iOS" : [
+    {
+      "name" : "APIKit",
+      "hash" : "17b995be50e787fc60084462eb063f14ed52d89b7ae4a34063a448deaed0ef12",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ]
+}
