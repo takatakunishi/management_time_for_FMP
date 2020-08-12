@@ -24,7 +24,6 @@ const ShowActiveTime: React.FC<Props> = props => {
                 </StyledContainer>
                 : <div />
             }
-
         </StyledShowActiveTime>
     )
 }
