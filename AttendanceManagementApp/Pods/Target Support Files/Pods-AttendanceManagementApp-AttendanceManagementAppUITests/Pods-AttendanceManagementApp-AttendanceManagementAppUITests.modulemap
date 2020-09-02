@@ -1,0 +1,6 @@
+framework module Pods_AttendanceManagementApp_AttendanceManagementAppUITests {
+  umbrella header "Pods-AttendanceManagementApp-AttendanceManagementAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

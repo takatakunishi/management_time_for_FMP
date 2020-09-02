@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  AttendanceManagementApp
 //
-//  Created by 工藤海斗 on 2020/07/29.
+//  Created by 工藤海斗 on 2020/09/02.
 //  Copyright © 2020 工藤海斗. All rights reserved.
 //
 
