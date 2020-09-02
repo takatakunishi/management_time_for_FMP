@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_AttendanceManagement_AttendanceManagementUITests : NSObject
+@end
+@implementation PodsDummy_Pods_AttendanceManagement_AttendanceManagementUITests
+@end
