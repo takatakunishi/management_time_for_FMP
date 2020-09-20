@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { theme } from '../../../styles/index'
 import { ThemeProvider } from 'styled-components'
 
+
 type Props = {
     label: string,
     onClickFunc: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void

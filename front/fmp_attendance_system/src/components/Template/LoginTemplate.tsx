@@ -2,18 +2,32 @@ import React from 'react'
 import Header from '../Organisms/Header'
 import LoginForm from '../Organisms/LoginForm'
 import TitleTest from '../Atoms/text/titleText'
+import LargeBtn from '../Atoms/btn/largeBtn'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 import { StyledContainer, theme } from '../../styles/index'
 
 const Login: React.FC = () => {
+    const history = useHistory()
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        e.preventDefault()
+        history.push({
+            pathname: '/' + "attendance",
+            state: {
+            }
+        })
+    }
     return (
         <StyledLogin>
             <Header />
             <StyledLoginContainer>
                 <TitleTest label="体は資本！" />
             </StyledLoginContainer>
-            <StyledLoginContainer >
+            <StyledLoginContainer>
                 <LoginForm />
+            </StyledLoginContainer>
+            <StyledLoginContainer >
+                <LargeBtn label="Login" onClickFunc={handleClick}/>
             </StyledLoginContainer>
         </StyledLogin>
     )
