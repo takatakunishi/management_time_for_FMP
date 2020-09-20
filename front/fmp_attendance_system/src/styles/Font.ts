@@ -3,9 +3,9 @@ export const fontTheme = {
         normal: {
             smallFontSize: "12px",
             normalFontSize: "17px",
-            largeFontSize: "23px",
+            largeFontSize: "34px",
             biggestFontSize: "35px",
-        },
+        }
     },
     text: {
         smallFontSize: "12px",
