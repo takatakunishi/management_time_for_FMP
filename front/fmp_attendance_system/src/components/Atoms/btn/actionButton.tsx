@@ -23,7 +23,7 @@ const StyledSingleInput = styled.input`
     background: #ECECEC;
     border: 2px solid #B0E0E6;
     transition: .4s;
-    color: ;
+    color: #00BCD4 ;
     &:focus {
         cursor: pointer;
         background: smorkwhite;
