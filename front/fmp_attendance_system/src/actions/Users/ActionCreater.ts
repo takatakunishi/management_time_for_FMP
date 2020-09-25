@@ -1,18 +1,10 @@
 import { UsersActionTypes } from './ActionType'
-import { createAction } from 'typesafe-actions'
+import { createAsyncAction } from 'typesafe-actions'
 import { UserData } from '../../states/User'
+import { GetUserParam } from '../../api/User/GetUserApi'
 
-export const addUserAction = createAction(
-    UsersActionTypes.ADD_USER,
-    (user: UserData) => user,
-)();
-
-export const setMainUserAction = createAction(
-    UsersActionTypes.SET_MAIN_USER,
-    (user: UserData) => user,
-)();
-
-export const setPrasedUserAction = createAction(
-    UsersActionTypes.SET_PRASED_USER,
-    (user: UserData) => user,
-)();
+export const getUserAction = createAsyncAction(
+    UsersActionTypes.GET_USER_REQUEST,
+    UsersActionTypes.GET_USER_SUCCESS,
+    UsersActionTypes.GET_USER_FAIL
+)<GetUserParam, UserData, Error>()

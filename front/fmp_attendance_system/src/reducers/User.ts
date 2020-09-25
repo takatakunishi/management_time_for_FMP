@@ -1,21 +1,20 @@
 import { UserData } from '../states/User'
-import { UsersActionTypes } from '../actions/Users/ActionType'
 import { UserAction } from '../actions/Users/Action'
+import { UsersActionTypes } from '../actions/Users/ActionType'
 
-const initialState: UserData = {}
+const initialState: UserData = {
+    name: "",
+    token: "",
+    startTimeYear: 0,
+    startTimeHour: 0,
+    startTimeMinute: 0,
+    status: ""
+}
 
 export default (state = initialState, action: UserAction): UserData => {
     switch (action.type) {
-        // case PraseActionTypes.SEND_PRASE_MESSAGE:
-
-        //     result = [...state]
-
-        //     result.push(action.payload)
-        //     result.sort((a, b) => {
-        //         return a.praseActionID - b.praseActionID
-        //     })
-
-        //     return result
+        case UsersActionTypes.GET_USER_SUCCESS:
+            return action.payload
         default:
             return state
     }

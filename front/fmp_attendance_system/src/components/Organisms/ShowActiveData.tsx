@@ -30,11 +30,11 @@ const ShowActiveData: React.FC = () => {
     return (
         <StyledShowTimes theme={theme}>
             <StyledContainer>
-                {(activity == "working") ?
+                {(activity === "working") ?
                     <DdoubleButtons leftLabel="休憩(入)" rightLabel="退勤" leftOnClickFunc={activityChange("active/rest")} rightOnClickFunc={activityChange("active/leave")} />
-                    : (activity == "rest") ?
+                    : (activity === "rest") ?
                         <CircleBtn label="作業" onClickFunc={activityChange("active/working")} />
-                        : (activity == "leave") ?
+                        : (activity === "leave") ?
                             <TitleText label="お疲れさまでした" /> : <div>false load</div>
                 }
             </StyledContainer>
